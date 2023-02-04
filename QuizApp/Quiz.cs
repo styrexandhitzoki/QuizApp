@@ -19,5 +19,20 @@ namespace QuizApp
             currentQuestionIndex = 0;
             score= 0;
         }
+
+        public Question CurrentQuestion
+        {
+            get { return questions[currentQuestionIndex]; }
+        }
+
+        public int Score
+        {
+            get { return score; }
+        }
+
+        public bool IsComplete
+        {
+            get { return currentQuestionIndex >= questions.Count; }
+        }
     }
 }
