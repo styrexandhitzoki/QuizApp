@@ -11,5 +11,13 @@ namespace QuizApp
         public List<string> questions;
         public int currentQuestionIndex;
         public int score;
+
+        public Quiz()
+        {
+            DataService dataService = new DataService();
+            //questions = dataService.LoadQuestions();
+            currentQuestionIndex = 0;
+            score= 0;
+        }
     }
 }
