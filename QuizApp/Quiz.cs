@@ -8,5 +8,8 @@ namespace QuizApp
 {
     class Quiz
     {
+        public List<string> questions;
+        public int currentQuestionIndex;
+        public int score;
     }
 }
