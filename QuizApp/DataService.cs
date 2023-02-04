@@ -8,5 +8,12 @@ namespace QuizApp
 {
     class DataService
     {
+        public List<Question> LoadQuestions()
+        {
+            // Load questions from API
+            // ...
+
+            return new List<Question>();
+        }
     }
 }
