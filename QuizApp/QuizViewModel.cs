@@ -34,5 +34,10 @@ namespace QuizApp
         {
             get { return quiz.IsComplete; }
         }
+
+        public void SubmitAnswer(int answerIndex)
+        {
+            quiz.SubmitAnswer(answerIndex);
+        }
     }
 }
