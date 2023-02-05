@@ -8,5 +8,11 @@ namespace QuizApp
 {
     class QuizViewModel
     {
+        private Quiz quiz;
+
+        public QuizViewModel()
+        {
+            quiz = new Quiz();
+        }
     }
 }
