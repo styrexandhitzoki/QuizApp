@@ -34,5 +34,14 @@ namespace QuizApp
         {
             get { return currentQuestionIndex >= questions.Count; }
         }
+
+        public void SubmitAnswer(int answerIndex)
+        {
+            if (answerIndex == CurrentQuestion.CorrectAnswerIndex)
+            {
+                score++;
+            }
+            currentQuestionIndex++;
+        }
     }
 }
