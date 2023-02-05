@@ -14,5 +14,25 @@ namespace QuizApp
         {
             quiz = new Quiz();
         }
+
+        public string CurrentQuestionText
+        {
+            get { return quiz.CurrentQuestion.Text; }
+        }
+
+        public List<string> CurrentQuestionAnswers
+        {
+            get { return quiz.CurrentQuestion.Answers; }
+        }
+
+        public int Score
+        {
+            get { return quiz.Score; }
+        }
+
+        public bool IsQuizComplete
+        {
+            get { return quiz.IsComplete; }
+        }
     }
 }
