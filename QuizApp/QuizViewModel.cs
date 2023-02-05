@@ -39,5 +39,10 @@ namespace QuizApp
         {
             quiz.SubmitAnswer(answerIndex);
         }
+
+        public void StartQuiz()
+        {
+            quiz = new Quiz();
+        }
     }
 }
