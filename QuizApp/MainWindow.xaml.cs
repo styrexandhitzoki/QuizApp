@@ -34,5 +34,10 @@ namespace QuizApp
             int selectedAnswerIndex = 0; // code to get the index of the selected answer (from the UI)
             quizViewModel.SubmitAnswer(selectedAnswerIndex);
         }
+
+        private void StartQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            quizViewModel.StartQuiz();
+        }
     }
 }
