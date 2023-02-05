@@ -8,6 +8,10 @@ namespace QuizApp
 {
     class Question
     {
+        /// <summary>
+        /// This class is used to show the Question Text and the Answers in the Application
+        /// </summary>
+
         public string Text { get; set; }
         public List<string> Answers { get; set; }
         public int CorrectAnswerIndex { get; set; }

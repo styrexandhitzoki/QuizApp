@@ -8,6 +8,10 @@ namespace QuizApp
 {
     class Quiz
     {
+        /// <summary>
+        /// This class is used to track the Questions and the Score
+        /// </summary>
+
         public List<Question> questions;
         public int currentQuestionIndex;
         public int score;
