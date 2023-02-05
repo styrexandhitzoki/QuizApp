@@ -28,5 +28,11 @@ namespace QuizApp
             quizViewModel = new QuizViewModel();
             DataContext = quizViewModel;
         }
+
+        private void SubmitAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedAnswerIndex = 0; // code to get the index of the selected answer (from the UI)
+            quizViewModel.SubmitAnswer(selectedAnswerIndex);
+        }
     }
 }
