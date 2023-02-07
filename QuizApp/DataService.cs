@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
+using Newtonsoft.Json;
 
 namespace QuizApp
 {
@@ -13,12 +16,24 @@ namespace QuizApp
         /// </summary>
         /// <returns></returns>
 
-        public List<Question> LoadQuestions()
+        private async Task<List<Question>> LoadQuestionsFromApiAsync()
         {
-            // Load questions from API
-            // ...
+            using (var client = new HttpClient())
+            {
+                string apiUrl = "https://the-trivia-api.com/api/questions/";
 
-            return new List<Question>();
+                string response = await client.GetStringAsync(apiUrl);
+                List<Question> questions = JsonConvert.DeserializeObject<List<Question>>(response);
+
+                return questions;
+            }
+        }
+
+        public async Task<List<Question>> LoadQuestions()
+        {
+            var questionTask = LoadQuestionsFromApiAsync();
+            var questions = await questionTask;
+            return questions;
         }
     }
 }
