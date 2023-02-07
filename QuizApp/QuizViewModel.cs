@@ -8,6 +8,11 @@ namespace QuizApp
 {
     class QuizViewModel
     {
+        /// <summary>
+        /// This class acts as bridge between the Model (Quiz class) and the View (UI).
+        /// It holds the data and logic for the view and is responsible for updates between the model and the view.
+        /// </summary>
+
         private Quiz quiz;
 
         public QuizViewModel()

@@ -1,0 +1,126 @@
+﻿<Window x:Class="QuizApp.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="1" Grid.RowSpan="5" Grid.Column="1" Grid.ColumnSpan="4"/>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4">
+            <TextBlock
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="90" x:Name="txt_titel">
+                Quiz - App
+            </TextBlock>
+        </Border>
+
+        <TextBlock
+            x:Name="txt_ersteller" FontSize="20"
+            VerticalAlignment="Bottom" HorizontalAlignment="Center"
+            Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2">
+            ~ Jannik und Nondas
+        </TextBlock>
+
+        <Label
+            x:Name="lbl_frage" Content="" FontSize="70"
+            Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"
+            VerticalAlignment="Center" HorizontalAlignment="Center">
+        </Label>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="3" Grid.Column="1">
+            <Button
+                x:Name="btn_answer1" Click="click_answer1"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                FontSize="50" Background="DarkGray"/>
+        </Border>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3">
+            <Button
+                x:Name="btn_answer2" Click="click_answer2"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                FontSize="50" Background="DarkGray"/>
+        </Border>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="4" Grid.Column="1">
+            <Button
+                x:Name="btn_answer3" Click="click_answer3"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                FontSize="50" Background="DarkGray"/>
+        </Border>
+
+        <Border
+            BorderBrush="Black" BorderThickness="1"
+            Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3">
+            <Button
+                x:Name="btn_answer4" Click="click_answer4"
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                FontSize="50" Background="DarkGray"/>
+        </Border>
+
+        <Label
+            x:Name="lbl_rightanswer" Content="" FontSize="30"
+            Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4">
+        </Label>
+
+        <Button
+            x:Name="btn_next" Click="click_next"
+            Grid.Row="5" Grid.Column="3"
+            VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+            FontSize="25" Background="DarkGray">
+            <Label
+                x:Name="lbl_next" Content="Nächste Frage" FontSize="30"
+                Grid.Row="5" Grid.Column="3">
+            </Label>
+        </Button>
+
+        <Button
+            x:Name="btn_end" Click="click_end"
+            Grid.Row="5" Grid.Column="4"
+            VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+            FontSize="25" Background="DarkGray">
+            <Label
+                x:Name="lbl_end" Content="Ende" FontSize="30"
+                Grid.Row="5" Grid.Column="4">
+            </Label>
+        </Button>
+
+    </Grid>
+</Window>

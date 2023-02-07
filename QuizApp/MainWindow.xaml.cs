@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Extensions.DependencyInjection;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
 
 namespace QuizApp
 {
@@ -20,24 +24,19 @@ namespace QuizApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private QuizViewModel quizViewModel;
-
         public MainWindow()
         {
             InitializeComponent();
-            quizViewModel = new QuizViewModel();
-            DataContext = quizViewModel;
         }
 
-        private void SubmitAnswer_Click(object sender, RoutedEventArgs e)
+        private void startButton_Click(object sender, RoutedEventArgs e)
         {
-            int selectedAnswerIndex = 0; // code to get the index of the selected answer (from the UI)
-            quizViewModel.SubmitAnswer(selectedAnswerIndex);
+            // Navigation logic to open the Quiz Window
         }
 
-        private void StartQuiz_Click(object sender, RoutedEventArgs e)
+        private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-            quizViewModel.StartQuiz();
+            Application.Current.Shutdown();
         }
     }
 }
