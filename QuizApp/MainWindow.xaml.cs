@@ -20,9 +20,24 @@ namespace QuizApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private QuizViewModel quizViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            quizViewModel = new QuizViewModel();
+            DataContext = quizViewModel;
+        }
+
+        private void SubmitAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedAnswerIndex = 0; // code to get the index of the selected answer (from the UI)
+            quizViewModel.SubmitAnswer(selectedAnswerIndex);
+        }
+
+        private void StartQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            quizViewModel.StartQuiz();
         }
     }
 }
