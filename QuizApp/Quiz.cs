@@ -21,7 +21,7 @@ namespace QuizApp
             DataService dataService = new DataService();
             questions = dataService.LoadQuestions().Result;
             currentQuestionIndex = 0;
-            score= 0;
+            score = 0;
         }
 
         public Question CurrentQuestion
